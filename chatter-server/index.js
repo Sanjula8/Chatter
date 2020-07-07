@@ -1,8 +1,9 @@
-const express = require('express');
+require("dotenv").config();
+const express = require("express");
 const app = express();
-const cors = require('cors');
-const bodyParser = require('body-parser');
-const errorHandler = require('./handlers/error');
+const cors = require("cors");
+const bodyParser = require("body-parser");
+const errorHandler = require("./handlers/error");
 
 const PORT = 8081;
 
@@ -12,7 +13,7 @@ app.use(bodyParser.json());
 // All Routes Here
 
 app.use(function (req, res, next) {
-	let err = new Error('Not Found');
+	let err = new Error("Not Found");
 	err.status = 404;
 	next(err);
 });
