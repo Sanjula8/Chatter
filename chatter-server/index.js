@@ -22,6 +22,8 @@ app.use(
 	messagesRoutes
 );
 
+app.get("/api/messages", loginRequired, async function (req, res, next) {});
+
 app.use(function (req, res, next) {
 	let err = new Error("Not Found");
 	err.status = 404;
