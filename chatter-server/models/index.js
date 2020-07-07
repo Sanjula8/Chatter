@@ -4,5 +4,8 @@ mongoose.Promise = Promise;
 
 mongoose.connect("mongodb://localhost/chatter", {
 	keepAlive: true,
-	useMongoClient: true,
+	useNewUrlParser: true,
+	useUnifiedTopology: true,
 });
+
+module.exports.User = require("./user");
