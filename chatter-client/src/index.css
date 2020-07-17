@@ -24,6 +24,10 @@ a {
 	text-decoration: none;
 }
 
+a {
+	cursor: pointer;
+}
+
 header {
 	display: flex;
 	justify-content: flex-end;
