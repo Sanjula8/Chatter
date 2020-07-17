@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
+
+.auth-container {
+	font-family: "Montserrat", "sans-serif";
+	border-radius: 5px;
+	padding: 20px;
+	text-align: center;
+}
+
+.authform {
+	display: inline-block;
+	background-color: rgba(210, 209, 209, 0.3);
+	border-radius: 10%;
+	padding-top: 10px;
+	padding-left: 90px;
+	padding-right: 90px;
+	padding-bottom: 30px;
+}
+
+h2 {
+	font-size: 50px;
+}
+.form-control {
+	text-align: center;
+}
+
+input,
+select,
+textarea {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid rgb(187, 216, 205);
+	border-radius: 4px;
+	box-sizing: border-box;
+	resize: vertical;
+}
+
+label {
+	padding: 12px 12px 12px 0;
+	display: inline-block;
+}
+
+.submit-button {
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	margin-top: 30px;
+	padding: 9px 25px;
+	background-color: rgb(187, 216, 205);
+	color: rgb(60, 60, 68);
+	font-size: 18px;
+	border: none;
+	border-radius: 50px;
+	height: auto;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+}
+
+.submit-button:hover {
+	background-color: rgb(60, 60, 68);
+	color: rgb(235, 235, 235);
+}
+
+/* Floating column for labels: 25% width */
+.col-25 {
+	float: left;
+	width: 25%;
+	margin-top: 6px;
+}
+
+/* Floating column for inputs: 75% width */
+.col-75 {
+	float: left;
+	width: 75%;
+	margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+@media screen and (max-width: 600px) {
+	.col-25,
+	.col-75,
+	input[type="submit"] {
+		width: 100%;
+		margin-top: 0;
+	}
+}

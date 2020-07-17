@@ -1,8 +1,8 @@
 import React from "react";
 import { Switch, Route, withRouter, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
-import Homepage from "../components/Homepage";
-import AuthForm from "../components/AuthForm";
+import Homepage from "../components/Homepage/Homepage";
+import AuthForm from "../components/AuthForm/AuthForm";
 import { authUser } from "../store/actions/auth";
 
 const Main = (props) => {
