@@ -54,9 +54,8 @@ exports.signup = async function (req, res, next) {
 			token,
 		});
 	} catch (err) {
-		// If a validation fails
 		if (err.code === 11000) {
-			err.message = "Sorry, that username and/or email is taken";
+			err.message = "Sorry, that username and/or email is taken.";
 		}
 		return next({
 			status: 400,

@@ -21,20 +21,40 @@ export default class AuthForm extends Component {
 	handleSubmit = (e) => {
 		e.preventDefault();
 		const authType = this.props.signUp ? "signup" : "signin";
-		this.props.onAuth(authType, this.state).then(() => {
-			console.log("LOGGED IN SUCCESS");
-		});
+		this.props
+			.onAuth(authType, this.state)
+			.then(() => {
+				console.log("LOGGED IN!");
+			})
+			.catch(() => {
+				return;
+			});
 	};
 
 	render() {
 		const { email, username, password, profileImageUrl } = this.state;
-		const { heading, buttonText, signUp } = this.props;
+		const {
+			heading,
+			buttonText,
+			signUp,
+			errors,
+			history,
+			removeError,
+		} = this.props;
+
+		history.listen(() => {
+			removeError();
+		});
+
 		return (
 			<div>
 				<div className="auth-container">
 					<div className="authform">
 						<form onSubmit={this.handleSubmit}>
 							<h2>{heading}</h2>
+							{errors.message && (
+								<div className="alert">{errors.message}</div>
+							)}
 							<label htmlFor="email">Email:</label>
 							<input
 								className="form-control"
@@ -50,6 +70,7 @@ export default class AuthForm extends Component {
 								className="form-control"
 								id="password"
 								name="password"
+								value={password}
 								onChange={this.handleChange}
 								type="password"
 							/>

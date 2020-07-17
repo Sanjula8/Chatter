@@ -91,3 +91,14 @@ label {
 		margin-top: 0;
 	}
 }
+
+/*ALERT*/
+.alert {
+	background-color: rgba(187, 63, 63, 0.858);
+	height: 50px;
+	padding-top: 20px;
+	color: white;
+	border-radius: 10px;
+	margin-bottom: 20px;
+	font-size: 20px;
+}
